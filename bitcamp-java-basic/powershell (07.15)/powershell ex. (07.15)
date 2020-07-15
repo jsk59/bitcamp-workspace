@@ -1,0 +1,670 @@
+#0715
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+새로운 크로스 플랫폼 PowerShell 사용 https://aka.ms/pscore6
+
+PS C:\Users\bitcamp> cd
+PS C:\Users\bitcamp> dir
+
+
+    디렉터리: C:\Users\bitcamp
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----     2020-07-14  오전 11:06                .config
+d-----     2020-07-13   오후 5:57                .eclipse
+d-----     2020-07-14  오전 10:48                .gradle
+d-----     2020-07-14   오후 7:14                .p2
+d-----     2020-07-13   오후 5:57                .tooling
+d-----     2020-07-13   오후 4:44                .vscode
+d-r---     2020-07-12   오후 5:31                3D Objects
+d-----     2020-07-15  오전 10:51                bitcamp-workspace
+d-r---     2020-07-12   오후 5:31                Contacts
+d-r---     2020-07-14   오후 3:00                Desktop
+d-r---     2020-07-12   오후 5:31                Documents
+d-r---     2020-07-15  오전 10:48                Downloads
+d-----     2020-07-13   오후 5:23                eclipse
+d-----     2020-07-13   오후 6:19                eclipse-workspace
+d-r---     2020-07-12   오후 5:31                Favorites
+d-----     2020-07-14  오전 10:21                git
+d-r---     2020-07-12   오후 5:31                Links
+d-r---     2020-07-12   오후 5:31                Music
+d-r---     2020-07-13   오전 9:00                OneDrive
+d-r---     2020-07-12   오후 5:32                Pictures
+d-r---     2020-07-12   오후 5:31                Saved Games
+d-----     2020-07-14  오전 11:06                scoop
+d-r---     2020-07-12   오후 5:32                Searches
+d-r---     2020-07-13   오후 4:56                Videos
+-a----     2020-07-13   오후 5:50             31 .gitconfig
+
+
+PS C:\Users\bitcamp> cd .\bitcamp-workspace\
+PS C:\Users\bitcamp\bitcamp-workspace>
+PS C:\Users\bitcamp\bitcamp-workspace> git init
+Initialized empty Git repository in C:/Users/bitcamp/bitcamp-workspace/.git/
+PS C:\Users\bitcamp\bitcamp-workspace> git add .
+PS C:\Users\bitcamp\bitcamp-workspace> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .gitignore
+        new file:   Hello.java
+        new file:   Hello2.java
+        new file:   hello.c
+        new file:   hello.js
+        new file:   hello2.c
+        new file:   hello2.js
+
+PS C:\Users\bitcamp\bitcamp-workspace> git commit -m "초기백업"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'bitcamp@DESKTOP-CV1N62J.(none)')
+PS C:\Users\bitcamp\bitcamp-workspace> git config --global user.name jsk59
+PS C:\Users\bitcamp\bitcamp-workspace> git config --global user.email jisookim5959@gmail.com
+PS C:\Users\bitcamp\bitcamp-workspace> git config --list
+core.symlinks=false
+core.autocrlf=true
+core.fscache=true
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+help.format=html
+diff.astextplain.textconv=astextplain
+rebase.autosquash=true
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+credential.helper=helper-selector
+credential.helper=manager
+user.name=jsk59
+user.email=jisookim5959@gmail.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+PS C:\Users\bitcamp\bitcamp-workspace>                                                                                  PS C:\Users\bitcamp\bitcamp-workspace> git commit -m "초기백업"
+[master (root-commit) 453934a] 초기백업
+ 7 files changed, 243 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 Hello.java
+ create mode 100644 Hello2.java
+ create mode 100644 hello.c
+ create mode 100644 hello.js
+ create mode 100644 hello2.c
+ create mode 100644 hello2.js
+PS C:\Users\bitcamp\bitcamp-workspace> git remote add origin https://github.com/jsk59/bitcamp-workspace.git
+PS C:\Users\bitcamp\bitcamp-workspace> git push -u origin master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 2.61 KiB | 2.61 MiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/jsk59/bitcamp-workspace.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+PS C:\Users\bitcamp\bitcamp-workspace> cd
+PS C:\Users\bitcamp\bitcamp-workspace> pwd
+
+Path
+----
+C:\Users\bitcamp\bitcamp-workspace
+
+
+PS C:\Users\bitcamp\bitcamp-workspace> pwd
+
+Path
+----
+C:\Users\bitcamp\bitcamp-workspace
+
+
+PS C:\Users\bitcamp\bitcamp-workspace> cd .\.git\
+PS C:\Users\bitcamp\bitcamp-workspace\.git> pwd
+
+Path
+----
+C:\Users\bitcamp\bitcamp-workspace\.git
+
+
+PS C:\Users\bitcamp\bitcamp-workspace\.git> cd
+PS C:\Users\bitcamp\bitcamp-workspace\.git> dir
+
+
+    디렉터리: C:\Users\bitcamp\bitcamp-workspace\.git
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----     2020-07-15  오전 11:50                hooks
+d-----     2020-07-15  오전 11:50                info
+d-----     2020-07-15  오후 12:24                logs
+d-----     2020-07-15  오후 12:24                objects
+d-----     2020-07-15  오후 12:30                refs
+-a----     2020-07-15  오후 12:24             13 COMMIT_EDITMSG
+-a----     2020-07-15  오후 12:30            309 config
+-a----     2020-07-15  오전 11:50             73 description
+-a----     2020-07-15  오전 11:50             23 HEAD
+-a----     2020-07-15  오후 12:09            593 index
+
+
+PS C:\Users\bitcamp\bitcamp-workspace\.git> cd ..
+PS C:\Users\bitcamp\bitcamp-workspace> cd ..
+PS C:\Users\bitcamp> cd .\.git\
+cd : 'C:\Users\bitcamp\.git\' 경로는 존재하지 않으므로 찾을 수 없습니다.
+위치 줄:1 문자:1
++ cd .\.git\
++ ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\bitcamp\.git\:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\bitcamp> cd git
+PS C:\Users\bitcamp\git> dir
+
+
+    디렉터리: C:\Users\bitcamp\git
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----     2020-07-14  오전 10:23                bitcamp-20191202
+
+
+PS C:\Users\bitcamp\git> git clone https://github.com/eomcs/eomcs-docs.git
+Cloning into 'eomcs-docs'...
+remote: Enumerating objects: 90, done.
+remote: Counting objects: 100% (90/90), done.
+remote: Compressing objects: 100% (85/85), done.
+remote: Total 90 (delta 1), reused 87 (delta 1), pack-reused 0
+Unpacking objects: 100% (90/90), 42.23 MiB | 6.44 MiB/s, done.
+PS C:\Users\bitcamp\git> dir
+
+
+    디렉터리: C:\Users\bitcamp\git
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----     2020-07-14  오전 10:23                bitcamp-20191202
+d-----     2020-07-15  오후 12:56                eomcs-docs
+
+
+PS C:\Users\bitcamp\git> git clone https://github.com/eomjinyoung/bitcamp-20200713.git
+Cloning into 'bitcamp-20200713'...
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 9 (delta 0), reused 9 (delta 0), pack-reused 0
+Unpacking objects: 100% (9/9), 2.59 KiB | 115.00 KiB/s, done.
+PS C:\Users\bitcamp\git> git clone https://github.com/eomcs/eomcs-java-basic.git
+Cloning into 'eomcs-java-basic'...
+remote: Enumerating objects: 498, done.
+remote: Counting objects: 100% (498/498), done.
+remote: Compressing objects: 100% (304/304), done.
+remote: Total 9666 (delta 211), reused 411 (delta 150), pack-reused 9168 eceiving objects:  99% (9570/9666), 2.48 MiB | 1.63 MiB/s
+Receiving objects: 100% (9666/9666), 2.94 MiB | 1.79 MiB/s, done.
+Resolving deltas: 100% (4290/4290), done.
+PS C:\Users\bitcamp\git> git clonegit clone https://github.com/eomcs/eomcs-java-web.git
+git: 'clonegit' is not a git command. See 'git --help'.
+PS C:\Users\bitcamp\git> git clone https://github.com/eomcs/eomcs-java-web.git
+Cloning into 'eomcs-java-web'...
+remote: Enumerating objects: 1147, done.
+remote: Counting objects: 100% (1147/1147), done.
+remote: Compressing objects: 100% (708/708), done.
+remote: Total 1147 (delta 492), reused 1011 (delta 359), pack-reused 0R                                                 346.00 KiB/s
+Receiving objects: 100% (1147/1147), 1.24 MiB | 1.25 MiB/s, done.
+Resolving deltas: 100% (492/492), done.
+PS C:\Users\bitcamp\git> git clone https://github.com/eomcs/eomcs-spring-webmvc.git
+Cloning into 'eomcs-spring-webmvc'...
+remote: Enumerating objects: 425, done.
+remote: Counting objects: 100% (425/425), done.
+remote: Compressing objects: 100% (256/256), done.
+Remote: Total 425 (delta 152), reused 386 (delta 116), pack-reused 0 eceiving objects:  83% (353/425)
+Receiving objects: 100% (425/425), 151.72 KiB | 432.00 KiB/s, done.
+Resolving deltas: 100% (152/152), done.
+PS C:\Users\bitcamp\git> git clone https://github.com/eomcs/eomcs-java-web-library.git
+Cloning into 'eomcs-java-web-library'...
+remote: Enumerating objects: 73, done.
+remote: Counting objects: 100% (73/73), done.
+remote: Compressing objects: 100% (50/50), done.
+remote: Total 73 (delta 6), reused 70 (delta 5), pack-reused 0
+Unpacking objects: 100% (73/73), 63.20 KiB | 182.00 KiB/s, done.
+PS C:\Users\bitcamp\git> dir
+
+
+    디렉터리: C:\Users\bitcamp\git
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----     2020-07-14  오전 10:23                bitcamp-20191202
+d-----     2020-07-15   오후 1:07                bitcamp-20200713
+d-----     2020-07-15  오후 12:56                eomcs-docs
+d-----     2020-07-15   오후 1:07                eomcs-java-basic
+d-----     2020-07-15   오후 1:09                eomcs-java-web
+d-----     2020-07-15   오후 1:10                eomcs-java-web-library
+d-----     2020-07-15   오후 1:10                eomcs-spring-webmvc
+
+
+PS C:\Users\bitcamp\git> git clone https://github.com/eomcs/eomcs-java-progect-2020.git
+Cloning into 'eomcs-java-progect-2020'...
+remote: Repository not found.
+fatal: repository 'https://github.com/eomcs/eomcs-java-progect-2020.git/' not found
+PS C:\Users\bitcamp\git> git clone https://github.com/eomcs/eomcs-java-project-2020.git
+Cloning into 'eomcs-java-project-2020'...
+remote: Enumerating objects: 464, done.
+remote: Counting objects: 100% (464/464), done.
+remote: Compressing objects: 100% (258/258), done.
+Receiving objects:  87% (404/464)used 362 (delta 127), pack-reused 0 eceiving objects:  80% (372/464)
+Receiving objects: 100% (464/464), 134.72 KiB | 365.00 KiB/s, done.
+Resolving deltas: 100% (226/226), done.
+PS C:\Users\bitcamp\git> dir
+
+
+    디렉터리: C:\Users\bitcamp\git
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----     2020-07-14  오전 10:23                bitcamp-20191202
+d-----     2020-07-15   오후 1:07                bitcamp-20200713
+d-----     2020-07-15  오후 12:56                eomcs-docs
+d-----     2020-07-15   오후 1:07                eomcs-java-basic
+d-----     2020-07-15   오후 1:11                eomcs-java-progect-2020
+d-----     2020-07-15   오후 1:12                eomcs-java-project-2020
+d-----     2020-07-15   오후 1:09                eomcs-java-web
+d-----     2020-07-15   오후 1:10                eomcs-java-web-library
+d-----     2020-07-15   오후 1:10                eomcs-spring-webmvc
+
+
+PS C:\Users\bitcamp\git> cd ..
+PS C:\Users\bitcamp> cd git
+PS C:\Users\bitcamp\git> cd bitcamp-workspace
+cd : 'C:\Users\bitcamp\git\bitcamp-workspace' 경로는 존재하지 않으므로 찾을 수 없습니다.
+위치 줄:1 문자:1
++ cd bitcamp-workspace
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\bitcamp\git\bitcamp-workspace:String) [Set-Location], ItemNotF
+   oundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\bitcamp\git> cd .\bitcamp-workspace\
+cd : 'C:\Users\bitcamp\git\bitcamp-workspace\' 경로는 존재하지 않으므로 찾을 수 없습니다.
+위치 줄:1 문자:1
++ cd .\bitcamp-workspace\
++ ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\bitcamp\git\bitcamp-workspace\:String) [Set-Location], ItemNot
+   FoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\bitcamp\git> cd bitcamp-20200713
+PS C:\Users\bitcamp\git\bitcamp-20200713> git pull
+warning: Pulling without specifying how to reconcile divergent branches is
+discouraged. You can squelch this message by running one of the following
+commands sometime before your next pull:
+
+  git config pull.rebase false  # merge (the default strategy)
+  git config pull.rebase true   # rebase
+  git config pull.ff only       # fast-forward only
+
+You can replace "git config" with "git config --global" to set a default
+preference for all repositories. You can also pass --rebase, --no-rebase,
+or --ff-only on the command line to override the configured default per
+invocation.
+
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0
+Unpacking objects: 100% (3/3), 1.59 KiB | 135.00 KiB/s, done.
+From https://github.com/eomjinyoung/bitcamp-20200713
+   2a0d5b2..8a86c4a  master     -> origin/master
+Updating 2a0d5b2..8a86c4a
+Fast-forward
+ ...31\230\352\262\275\354\244\200\353\271\204.txt" | 74 ++++++++++++++++++++++
+ 1 file changed, 74 insertions(+)
+ create mode 100644 "\352\260\234\353\260\234\355\231\230\352\262\275\354\244\200\353\271\204.txt"
+PS C:\Users\bitcamp\git\bitcamp-20200713> cd
+PS C:\Users\bitcamp\git\bitcamp-20200713> cd ..
+PS C:\Users\bitcamp\git> cd ..
+PS C:\Users\bitcamp> cd bitcamp-workspace
+PS C:\Users\bitcamp\bitcamp-workspace> git add .
+PS C:\Users\bitcamp\bitcamp-workspace> git commit -m 'README.md 파일 추가'
+[master 1bcaf11] README.md 파일 추가
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+PS C:\Users\bitcamp\bitcamp-workspace> git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 297 bytes | 297.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/jsk59/bitcamp-workspace.git
+   453934a..1bcaf11  master -> master
+PS C:\Users\bitcamp\bitcamp-workspace>  cd bitcamp-java-basic
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> gradle init
+
+Select type of project to generate:
+  1: basic
+  2: application
+  3: library
+  4: Gradle plugin
+Select implementation language:
+  1: C++
+  2: Groovy---> 0% EXECUTING [1s]
+  3: Java
+  4: Kotlin
+  5: Swift
+Select build script DSL:
+  1: Groovy
+  2: Kotlin---> 50% EXECUTING [1m 6s]
+Select test framework:
+  1: JUnit 4
+  2: TestNG---> 50% EXECUTING [1m 18s]
+  3: Spock
+  4: JUnit Jupiter
+
+> Task :init
+Get more help with your project: https://docs.gradle.org/6.5.1/userguide/tutorial_java_projects.html
+
+BUILD SUCCESSFUL in 14m 0s
+2 actionable tasks: 2 executed
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> cd src/main/java                                              PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic\src\main\java> dir
+
+    디렉터리: C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic\src\main\java
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----     2020-07-15   오후 3:57              0 Hello2.java
+-a----     2020-07-15   오후 3:54             23 README.md
+
+
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic\src\main\java> javac Hello2.java
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic\src\main\java> javac Hello2.java
+Hello2.java:8: error: unmappable character (0xEC) for encoding x-windows-949
+// 二쇱젣: ?냼?뒪 ?뙆?씪怨? 諛붿씠?듃 肄붾뱶瑜? 遺꾨━?븯湲?
+        ^
+Hello2.java:8: error: unmappable character (0xEC) for encoding x-windows-949
+// 二쇱젣: ?냼?뒪 ?뙆?씪怨? 諛붿씠?듃 肄붾뱶瑜? 遺꾨━?븯湲?
+          ^
+Hello2.java:8: error: unmappable character (0xED) for encoding x-windows-949
+// 二쇱젣: ?냼?뒪 ?뙆?씪怨? 諛붿씠?듃 肄붾뱶瑜? 遺꾨━?븯湲?
+             ^
+Hello2.java:8: error: unmappable character (0xEC) for encoding x-windows-949
+// 二쇱젣: ?냼?뒪 ?뙆?씪怨? 諛붿씠?듃 肄붾뱶瑜? 遺꾨━?븯湲?
+               ^
+Hello2.java:8: error: unmappable character (0xBC) for encoding x-windows-949
+// 二쇱젣: ?냼?뒪 ?뙆?씪怨? 諛붿씠?듃 肄붾뱶瑜? 遺꾨━?븯湲?
+                  ^
+Hello2.java:8: error: unmappable character (0xED) for encoding x-windows-949
+// 二쇱젣: ?냼?뒪 ?뙆?씪怨? 諛붿씠?듃 肄붾뱶瑜? 遺꾨━?븯湲?
+                       ^
+Hello2.java:8: error: unmappable character (0xBC) for encoding x-windows-949
+// 二쇱젣: ?냼?뒪 ?뙆?씪怨? 諛붿씠?듃 肄붾뱶瑜? 遺꾨━?븯湲?
+                              ^
+Hello2.java:8: error: unmappable character (0xED) for encoding x-windows-949
+// 二쇱젣: ?냼?뒪 ?뙆?씪怨? 諛붿씠?듃 肄붾뱶瑜? 遺꾨━?븯湲?
+                                   ^
+Hello2.java:8: error: unmappable character (0xB0) for encoding x-windows-949
+// 二쇱젣: ?냼?뒪 ?뙆?씪怨? 諛붿씠?듃 肄붾뱶瑜? 遺꾨━?븯湲?
+                                      ^
+9 errors
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic\src\main\java> javac -encoding UTF-8 Hello2.java
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic\src\main\java> dir
+
+
+    디렉터리: C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic\src\main\java
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----     2020-07-15   오후 4:03            419 Hello2.class
+-a----     2020-07-15   오후 4:01            186 Hello2.java
+-a----     2020-07-15   오후 3:54             23 README.md
+
+
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic\src\main\java> java Hello2
+Hello, world!
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic\src\main\java> dir
+
+
+    디렉터리: C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic\src\main\java
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----     2020-07-15   오후 4:03            419 Hello2.class
+-a----     2020-07-15   오후 4:01            186 Hello2.java
+-a----     2020-07-15   오후 3:54             23 README.md
+
+
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic\src\main\java> rm *.class
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic\src\main\java> dir
+
+
+    디렉터리: C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic\src\main\java
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----     2020-07-15   오후 4:01            186 Hello2.java
+-a----     2020-07-15   오후 3:54             23 README.md
+
+
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic\src\main\java> cd ../../..
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> javac src/main/java/Hello2.java
+src\main\java\Hello2.java:8: error: unmappable character (0xEC) for encoding x-windows-949
+// 二쇱젣: ?냼?뒪 ?뙆?씪怨? 諛붿씠?듃 肄붾뱶瑜? 遺꾨━?븯湲?
+        ^
+src\main\java\Hello2.java:8: error: unmappable character (0xEC) for encoding x-windows-949
+// 二쇱젣: ?냼?뒪 ?뙆?씪怨? 諛붿씠?듃 肄붾뱶瑜? 遺꾨━?븯湲?
+          ^
+src\main\java\Hello2.java:8: error: unmappable character (0xED) for encoding x-windows-949
+// 二쇱젣: ?냼?뒪 ?뙆?씪怨? 諛붿씠?듃 肄붾뱶瑜? 遺꾨━?븯湲?
+             ^
+src\main\java\Hello2.java:8: error: unmappable character (0xEC) for encoding x-windows-949
+// 二쇱젣: ?냼?뒪 ?뙆?씪怨? 諛붿씠?듃 肄붾뱶瑜? 遺꾨━?븯湲?
+               ^
+src\main\java\Hello2.java:8: error: unmappable character (0xBC) for encoding x-windows-949
+// 二쇱젣: ?냼?뒪 ?뙆?씪怨? 諛붿씠?듃 肄붾뱶瑜? 遺꾨━?븯湲?
+                  ^
+src\main\java\Hello2.java:8: error: unmappable character (0xED) for encoding x-windows-949
+// 二쇱젣: ?냼?뒪 ?뙆?씪怨? 諛붿씠?듃 肄붾뱶瑜? 遺꾨━?븯湲?
+                       ^
+src\main\java\Hello2.java:8: error: unmappable character (0xBC) for encoding x-windows-949
+// 二쇱젣: ?냼?뒪 ?뙆?씪怨? 諛붿씠?듃 肄붾뱶瑜? 遺꾨━?븯湲?
+                              ^
+src\main\java\Hello2.java:8: error: unmappable character (0xED) for encoding x-windows-949
+// 二쇱젣: ?냼?뒪 ?뙆?씪怨? 諛붿씠?듃 肄붾뱶瑜? 遺꾨━?븯湲?
+                                   ^
+src\main\java\Hello2.java:8: error: unmappable character (0xB0) for encoding x-windows-949
+// 二쇱젣: ?냼?뒪 ?뙆?씪怨? 諛붿씠?듃 肄붾뱶瑜? 遺꾨━?븯湲?
+                                      ^
+9 errors
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> javac -encoding UTF-8 src/main/java/Hello2.java
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> dir
+
+
+    디렉터리: C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----     2020-07-15   오후 3:30                .gradle
+d-----     2020-07-15   오후 3:30                gradle
+d-----     2020-07-15   오후 3:44                src
+-a----     2020-07-15   오후 3:44            160 .gitattributes
+-a----     2020-07-15   오후 3:44            108 .gitignore
+-a----     2020-07-15   오후 3:44            968 build.gradle
+-a----     2020-07-15   오후 3:30           5770 gradlew
+-a----     2020-07-15   오후 3:30           3058 gradlew.bat
+-a----     2020-07-15   오후 3:44            377 settings.gradle
+
+
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> java src/main/java/Hello2
+Error: Could not find or load main class src.main.java.Hello2
+Caused by: java.lang.NoClassDefFoundError: Hello2 (wrong name: src/main/java/Hello2)
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> java -classpath src/main/java Hello
+Error: Could not find or load main class Hello
+Caused by: java.lang.ClassNotFoundException: Hello
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> java -classpath src/main/java/Hello2
+Usage: java [options] <mainclass> [args...]
+           (to execute a class)
+   or  java [options] -jar <jarfile> [args...]
+           (to execute a jar file)
+   or  java [options] -m <module>[/<mainclass>] [args...]
+       java [options] --module <module>[/<mainclass>] [args...]
+           (to execute the main class in a module)
+   or  java [options] <sourcefile> [args]
+           (to execute a single source-file program)
+
+ Arguments following the main class, source file, -jar <jarfile>,
+ -m or --module <module>/<mainclass> are passed as the arguments to
+ main class.
+
+ where options include:
+
+    -cp <class search path of directories and zip/jar files>
+    -classpath <class search path of directories and zip/jar files>
+    --class-path <class search path of directories and zip/jar files>
+                  A ; separated list of directories, JAR archives,
+                  and ZIP archives to search for class files.
+    -p <module path>
+    --module-path <module path>...
+                  A ; separated list of directories, each directory
+                  is a directory of modules.
+    --upgrade-module-path <module path>...
+                  A ; separated list of directories, each directory
+                  is a directory of modules that replace upgradeable
+                  modules in the runtime image
+    --add-modules <module name>[,<module name>...]
+                  root modules to resolve in addition to the initial module.
+                  <module name> can also be ALL-DEFAULT, ALL-SYSTEM,
+                  ALL-MODULE-PATH.
+    --list-modules
+                  list observable modules and exit
+    -d <module name>
+    --describe-module <module name>
+                  describe a module and exit
+    --dry-run     create VM and load main class but do not execute main method.
+                  The --dry-run option may be useful for validating the
+                  command-line options such as the module system configuration.
+    --validate-modules
+                  validate all modules and exit
+                  The --validate-modules option may be useful for finding
+                  conflicts and other errors with modules on the module path.
+    -D<name>=<value>
+                  set a system property
+    -verbose:[class|module|gc|jni]
+                  enable verbose output
+    -version      print product version to the error stream and exit
+    --version     print product version to the output stream and exit
+    -showversion  print product version to the error stream and continue
+    --show-version
+                  print product version to the output stream and continue
+    --show-module-resolution
+                  show module resolution output during startup
+    -? -h -help
+                  print this help message to the error stream
+    --help        print this help message to the output stream
+    -X            print help on extra options to the error stream
+    --help-extra  print help on extra options to the output stream
+    -ea[:<packagename>...|:<classname>]
+    -enableassertions[:<packagename>...|:<classname>]
+                  enable assertions with specified granularity
+    -da[:<packagename>...|:<classname>]
+    -disableassertions[:<packagename>...|:<classname>]
+                  disable assertions with specified granularity
+    -esa | -enablesystemassertions
+                  enable system assertions
+    -dsa | -disablesystemassertions
+                  disable system assertions
+    -agentlib:<libname>[=<options>]
+                  load native agent library <libname>, e.g. -agentlib:jdwp
+                  see also -agentlib:jdwp=help
+    -agentpath:<pathname>[=<options>]
+                  load native agent library by full pathname
+    -javaagent:<jarpath>[=<options>]
+                  load Java programming language agent, see java.lang.instrument
+    -splash:<imagepath>
+                  show splash screen with specified image
+                  HiDPI scaled images are automatically supported and used
+                  if available. The unscaled image filename, e.g. image.ext,
+                  should always be passed as the argument to the -splash option.
+                  The most appropriate scaled image provided will be picked up
+                  automatically.
+                  See the SplashScreen API documentation for more information
+    @argument files
+                  one or more argument files containing options
+    -disable-@files
+                  prevent further argument file expansion
+    --enable-preview
+                  allow classes to depend on preview features of this release
+To specify an argument for a long option, you can use --<name>=<value> or
+--<name> <value>.
+
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> java -classpath src/main/java Hello2
+Hello, world!
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> javac -encoding UTF-8 -d bin src/mail/java/Hello2.java
+error: file not found: src\mail\java\Hello2.java
+Usage: javac <options> <source files>
+use --help for a list of possible options
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> javac -encoding UTF-8 -d bin src/main/java/Hello2.java
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> java -classpath bin Hello2
+Hello, world!
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> javac -encoding UTF-8 -d bin src/main/java/com/eomcs/basic/Hello2.java
+
+
+
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> java -classpath bin Hello2
+com/eomcs/basic/Hello2.java
+Hello, world!
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> javac -encoding UTF-8 -d bin src/main/java/com/eomcs/basic/Hello2.java
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> java -classpath bin Hello2
+com/eomcs/basic/Hello2.java
+Hello, world!
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> javac -encoding UTF-8 -d bin src/main/java/com/eomcs/basic/Hello2.java
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> java -classpath bin Hello2
+com/eomcs/basic/Hello2.java
+Hello, world!
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> java -classpath bin com.eomcs.basic.Hello2
+com/eomcs/basic/Hello2.java + 패키지문법 적용
+Hello, world!
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> javac -encoding UTF-8 -d bin src/main/jav/Hello2.java
+error: file not found: src\main\jav\Hello2.java
+Usage: javac <options> <source files>
+use --help for a list of possible options
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> javac -encoding UTF-8 -d bin src/main/java/Hello2.java
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> javac -encoding UTF-8 -d bin src/main/java/com/eomcs/Hello2.java
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> java -classpath bin Hello2
+com/eomcs/Hello2.java
+Hello, world!
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> javac -encoding UTF-8 -d bin src/main/java/com/eomcs/Hello2.java
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> javac -encoding UTF-8 -d bin src/main/java/Hello2.java
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> java -classpath bin Hello2
+Hello, world!
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> javac -encoding UTF-8 -d bin src/main/java/com/eomcs/basic/Hello2.java
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> javac -encoding UTF-8 -d bin src/main/java/com/eomcs/basic/Hello2.java
+PS C:\Users\bitcamp\bitcamp-workspace\bitcamp-java-basic> java -classpath bin com.eomcs.basic.Hello2
+com/eomcs/basic/Hello2.java
+Hello, world!
